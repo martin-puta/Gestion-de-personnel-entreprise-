@@ -1,0 +1,292 @@
+/* General Layout and Typography */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.scheduler-container {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    margin: 3rem auto;
+    max-width: 1400px;
+    box-shadow: none; /* Removed box-shadow */
+    border-radius: 0; /* Removed border-radius */
+}
+
+/* Header and Navigation */
+.scheduler-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.scheduler-header .navigation {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.scheduler-header .navigation button {
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.scheduler-header .navigation button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Dashboard Statistics */
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background-color: #f7f9fc;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+}
+
+.stat-card span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.present-count span { color: #2ecc71; }
+.absent-count span { color: #e74c3c; }
+.holiday-count span { color: #f1c40f; }
+
+/* Control and Filter Bar */
+.scheduler-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.scheduler-controls input[type="text"] {
+    flex-grow: 1;
+    min-width: 200px;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.scheduler-controls input[type="text"]:focus,
+.scheduler-controls select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.scheduler-controls select,
+.scheduler-controls button {
+    padding: 0.75rem 1.25rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.scheduler-controls button:hover,
+.scheduler-controls select:hover {
+    background-color: #e9ecef;
+}
+
+.scheduler-controls button:active {
+    transform: scale(0.98);
+}
+
+.reset-btn {
+    background-color: #e74c3c !important;
+    color: white;
+    border-color: #e74c3c !important;
+}
+
+.reset-btn:hover {
+    background-color: #c0392b !important;
+}
+
+/* Employee Addition Form */
+.add-employee-form {
+    margin-top: 2rem;
+    border-top: 1px solid #eee;
+    padding-top: 1.5rem;
+}
+
+.add-employee-form input[type="text"] {
+    flex-grow: 1;
+    min-width: 200px;
+}
+
+/* TABLE STYLES - New structure for better table display */
+.scheduler-table {
+    width: 100%;
+    border-collapse: collapse; /* Ensure borders are clean */
+    table-layout: fixed; /* Fixed layout for consistent column width */
+}
+
+.scheduler-table th, .scheduler-table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #e0e0e0; /* Cell borders */
+    font-size: 1rem;
+}
+
+.scheduler-table thead th {
+    background-color: #f7f9fc;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.employee-name-cell, .status-cell, .actions-cell {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.employee-name-cell {
+    text-align: left;
+    font-weight: 500;
+}
+
+/* Status colors */
+.status-cell.present {
+    background-color: #eaf8f0;
+    color: #2ecc71;
+}
+
+.status-cell.absent {
+    background-color: #fbecec;
+    color: #e74c3c;
+}
+
+.status-cell.holiday {
+    background-color: #e0f2f7;
+    color: #3498db;
+}
+
+/* Action Buttons */
+.actions-cell {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.actions-cell button {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.edit-btn { background-color: #3498db; color: white; }
+.delete-btn { background-color: #e74c3c; color: white; }
+.save-btn { background-color: #2ecc71; color: white; }
+.cancel-btn { background-color: #95a5a6; color: white; }
+
+.edit-btn:hover { background-color: #2980b9; }
+.delete-btn:hover { background-color: #c0392b; }
+.save-btn:hover { background-color: #27ae60; }
+.cancel-btn:hover { background-color: #7f8c8d; }
+
+/* Fichier: Analatics.css */
+
+.scheduler-grid {
+    display: grid;
+    /* Définit le nombre de colonnes et leurs largeurs */
+    /* 1 colonne pour le nom (ex: 200px), 7 colonnes pour les jours (ex: 1fr ou 100px), 1 colonne pour les actions */
+    grid-template-columns: 200px repeat(7, 1fr) 120px; /* Ajustez ces valeurs selon vos besoins */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden; /* Pour gérer les coins arrondis */
+    margin-top: 20px;
+}
+
+.grid-header,
+.grid-row {
+    display: contents; /* Permet aux éléments enfants d'être placés directement dans la grille */
+}
+
+/* Styles pour les en-têtes de colonne */
+.grid-header > div {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    padding: 10px 5px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ddd;
+    /* Assure que la cellule de l'en-tête s'aligne dans sa colonne */
+    grid-column: auto; 
+}
+
+/* Assurez-vous que les cellules de la ligne s'alignent dans leurs colonnes */
+.employee-name-cell,
+.status-cell,
+.action-buttons {
+    padding: 10px 5px;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    text-align: center;
+    overflow: hidden; /* Empêche les débordements */
+    white-space: nowrap; /* Empêche le retour à la ligne pour le nom */
+    text-overflow: ellipsis; /* Ajoute des points de suspension si le nom est trop long */
+}
+
+/* Assurez-vous que la première cellule de chaque ligne (le nom) s'étend sur la première colonne */
+.employee-name-cell {
+    text-align: left;
+    padding-left: 15px;
+    font-weight: 500;
+}
+
+/* Styles de la dernière colonne (Actions) */
+.actions-header,
+.action-buttons {
+    border-right: none; /* Supprime la bordure à droite de la dernière colonne */
+}
+
+.grid-row:nth-child(odd) > div {
+    background-color: #ffffff;
+}
+
+.grid-row:nth-child(even) > div {
+    background-color: #f9f9f9;
+}
+
+/* Styles pour les différents statuts (juste un exemple) */
+.status-cell.present { background-color: #e6ffe6; color: #008000; }
+.status-cell.absent { background-color: #ffe6e6; color: #cc0000; }
+.status-cell.holiday { background-color: #f0f8ff; color: #0000cc; }

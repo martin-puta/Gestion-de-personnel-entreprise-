@@ -1,0 +1,81 @@
+/* General reset for a clean start */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box; /* Added for better box model handling */
+}
+
+.container {
+  display: flex;
+}
+
+/* The main content area */
+main {
+  width: 100%;
+  padding: 20px;
+  margin-left: 200px; /* Add margin to prevent content from going under the sidebar */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  background: #0C99FF;
+  color: #fff;
+  height: 100vh;
+  width: 200px;
+  position: fixed; /* This is the key change to keep it fixed */
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+  overflow-y: auto; /* Adds a scrollbar if menu items exceed screen height */
+}
+
+.top_section {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+}
+
+.logo {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+.bars {
+  display: flex;
+  font-size: 25px;
+  margin-left: auto; /* Aligns the icon to the right */
+  cursor: pointer;
+  color: white;
+}
+
+/* Link Styles */
+.link {
+  display: flex;
+  color: #fff;
+  padding: 15px 20px; /* Adjusted padding for better spacing */
+  gap: 15px;
+  transition: all 0.5s;
+  align-items: center; /* Vertically centers the icon and text */
+}
+
+.link:hover {
+  background: lightskyblue;
+  color: #000;
+  transition: all 1s;
+}
+
+.active {
+  background: lightskyblue;
+  color: #0C99FF;
+}
+
+.icon,
+.link_text {
+  font-size: 20px;
+}
+
+h1 {
+  font-weight: bold;
+}

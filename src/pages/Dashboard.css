@@ -1,0 +1,432 @@
+/* General Layout and Typography */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.dashboard-page {
+  padding: 20px 40px;
+}
+
+/* --- Header Styles --- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-left .page-path {
+  font-size: 14px;
+  color: #777;
+}
+
+.header-left .greeting {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.header-left .subtitle {
+  color: #888;
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background: none;
+  margin-left: 8px;
+}
+
+.add-project-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-project-btn:hover {
+  background-color: #0056b3;
+}
+
+.bell-icon {
+  cursor: pointer;
+}
+
+/* --- MODIFIED: User Profile Styles --- */
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.user-post {
+  font-size: 12px;
+  color: #888;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-form {
+  position: absolute;
+  top: 100%; /* Position below the profile info */
+  right: 0;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user-form h4 {
+  margin: 0 0 10px;
+}
+
+.user-form label {
+  font-size: 14px;
+  color: #555;
+  font-weight: bold;
+}
+
+.user-form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box; /* To include padding in width */
+  margin-bottom: 5px;
+}
+
+.user-form-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.user-form-buttons button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #218838;
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #c82333;
+}
+
+/* --- END MODIFIED --- */
+
+/* --- Main Content Layout --- */
+.main-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.main-left, .main-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --- Card Styles --- */
+.card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Welcome Card */
+.welcome-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.weather-info {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* --- Meetings Card --- */
+.next-meetings-card .card-header button {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.next-meetings-card .card-header button:hover {
+  background-color: #f0f0f0;
+}
+
+.meeting-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.meeting-item:last-child {
+  border-bottom: none;
+}
+
+.meeting-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- Projects Card --- */
+.latest-projects-card .project-item {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.latest-projects-card .project-item:last-child {
+  border-bottom: none;
+}
+
+.project-item .project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.status-tag {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.status-active { background-color: #e0f7e9; color: #28a745; }
+.status-high { background-color: #f8d7da; color: #dc3545; }
+.status-done { background-color: #d1ecf1; color: #17a2b8; }
+.status-ligne { background-color: #fff3cd; color: #ffc107; }
+.status-pending { background-color: #e2e3e5; color: #6c757d; }
+
+/* --- Create Task Card --- */
+.add-task-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.add-task-container input {
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.add-task-container input:focus {
+  border-color: #007bff;
+}
+
+.add-task-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-task-btn:hover {
+  background-color: #0056b3;
+}
+
+.create-task-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.create-task-card li {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.create-task-card li:last-child {
+  border-bottom: none;
+}
+
+.create-task-card li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.delete-task {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-left: auto;
+}
+
+.create-task-card li:hover .delete-task {
+  opacity: 1;
+}
+
+/* --- ToDo Card --- */
+.todo-card .todo-item {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.todo-card .todo-item:last-child {
+  border-bottom: none;
+}
+
+.todo-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* --- Formulaires dynamiques --- */
+.add-project-form, .add-meeting-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.add-project-form input, .add-project-form textarea,
+.add-meeting-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.add-project-form input:focus, .add-project-form textarea:focus,
+.add-meeting-form input:focus {
+  border-color: #007bff;
+}
+
+.add-project-form button, .add-meeting-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.add-project-form button[type="submit"], .add-meeting-form button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+}
+
+.add-project-form button[type="submit"]:hover, .add-meeting-form button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.add-project-form button[type="button"], .add-meeting-form button[type="button"] {
+  background-color: #dc3545;
+  color: white;
+  margin-top: 5px;
+}
+
+.add-project-form button[type="button"]:hover, .add-meeting-form button[type="button"]:hover {
+  background-color: #c82333;
+}

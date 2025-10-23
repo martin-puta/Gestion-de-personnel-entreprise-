@@ -1,0 +1,11 @@
+h1{
+    color: blue;
+}
+.productPage{
+    background-color: red;
+    /* cursor: progress; */
+    /* background-image: url('../images/codding.webp'); */
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
